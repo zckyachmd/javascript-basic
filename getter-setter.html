@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Getter dan Setter</title>
+</head>
+
+<body>
+  <script>
+    // Getter dan Setter digunakan untuk mengakses dan mengubah nilai dari sebuah property
+
+    const person = {
+      firstName: 'Zacky',
+      lastName: 'Burhani',
+      // Getter (mengambil nilai dari property)
+      get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+      },
+      // Setter (mengubah nilai dari property)
+      set fullName(value) {
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+      }
+    }
+
+    // Getter
+    person.lastName = 'Achmad';
+    console.info(person.fullName); // Zacky Burhani (getter)
+
+    // Setter
+    person.fullName = 'Zacky Karim';
+    console.table(person); // Zacky Karim (setter)
+  </script>
+</body>
+
+</html>

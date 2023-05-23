@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>String Template</title>
+</head>
+
+<body>
+  <script>
+    const name = "Zacky";
+    const hobby = "coding";
+    const template = `Hello, my name is ${name}. I love ${hobby}.`;
+
+    document.write(template);
+
+    const score = 80;
+    const template2 = `Programmer level ${score > 70 ? "expert" : "beginner"}`;
+
+    document.write("<br>" + template2);
+
+    let multiLineString = `
+      Hello, my name is ${name}.
+      I love ${hobby}.
+    `;
+
+    document.write("<pre>" + multiLineString + "</pre>");
+  </script>
+</body>
+
+</html>

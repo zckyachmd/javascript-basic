@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Arrow</title>
+</head>
+
+<body>
+  <script>
+    // Arrow function
+    // const sayHello = (firstName, middleName, lastName) => {
+    //   console.log(`Hello ${firstName} ${middleName} ${lastName}`);
+    // }
+
+    // Arrow function without curly braces
+    const sayHello = (firstName, middleName, lastName) => console.log(`Hello ${firstName} ${middleName} ${lastName}`);
+
+    sayHello('John', 'F', 'Kennedy');
+
+    // Arrow function without curly braces and only one parameter
+    // const sayHello = firstName => console.log(`Hello ${firstName}`);
+
+    sayHello('John');
+
+    // Anonymous function
+    giveMeName = function (name) {
+      return `Hello ${name}`;
+    }
+
+    // Arrow function with parameter
+    const say = giveMeName(name => `Hello ${name}`);
+
+    console.log(say('John'));
+  </script>
+</body>
+
+</html>

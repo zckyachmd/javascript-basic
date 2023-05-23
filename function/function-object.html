@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Object</title>
+</head>
+
+<body>
+  <script>
+    // Function Object / Object Method
+    // Function Object adalah sebuah object yang berisi function
+    // Function Object bisa disimpan dalam variable
+
+    // Function Declaration
+    const sayHello = {
+      name: 'Hello',
+      run: function () {
+        console.log(this.name);
+      }
+    }
+
+    // Object Method
+    const sayHello2 = {
+      name: 'Hello'
+    }
+
+    sayHello2.run = function () {
+      console.log(this.name);
+    }
+
+    // Function Expression
+    sayHello.run();
+    sayHello2.run();
+  </script>
+</body>
+
+</html>

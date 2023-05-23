@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Optional Parameter</title>
+</head>
+
+<body>
+  <script>
+    // By default, the value of the parameter is undefined if the parameter is not passed
+    function sayHello(firstName, middleName, lastName) {
+      console.log(`Hello ${firstName} ${middleName} ${lastName}`);
+    }
+
+    sayHello();
+    sayHello('John');
+    sayHello('John', 'F');
+    sayHello('John', 'F', 'Kennedy');
+  </script>
+</body>
+
+</html>

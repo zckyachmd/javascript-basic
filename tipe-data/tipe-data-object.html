@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Tipe Data Object</title>
+</head>
+
+<body>
+  <script>
+    // Object adalah tipe data yang berisi kumpulan nilai yang memiliki nama (key) dan nilai (value)
+    // Object mirip dengan array, namun indexnya bukan angka melainkan string
+    // Object dibuat dengan menggunakan kurung kurawal {}
+    // Object dapat berisi banyak tipe data seperti string, number, boolean, array, dan object lainnya
+    const person = {
+      name: 'Achmad',
+    };
+
+    // Menambah atau mengubah properti object (properti = index)
+    person['name'] = 'Zacky';
+    person['age'] = 20;
+
+    console.table(person);
+
+    // Menghapus properti object
+    delete person['age'];
+
+    console.table(person);
+
+    // Mengakses properti object
+    console.info(`Nama saya ${person.name}`)
+    console.info(`Umur saya ${person['age']}`)
+  </script>
+</body>
+
+</html>

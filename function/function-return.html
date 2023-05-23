@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Returun</title>
+</head>
+
+<body>
+  <script>
+    // Function Declaration
+    function sayHello(name) {
+      const say = `Hello ${name}`;
+      return say;
+    }
+
+    function getFinalScore(value) {
+      if (value >= 90) {
+        return 'A';
+      } else if (value >= 80) {
+        return 'B';
+      } else if (value >= 70) {
+        return 'C';
+      } else if (value >= 60) {
+        return 'D';
+      } else {
+        return 'E';
+      }
+    }
+
+    // Use Function
+    const helloJohn = sayHello('John');
+    console.log(helloJohn);
+
+    const helloDoe = sayHello('Doe');
+    console.log(helloDoe);
+
+    const helloSmith = sayHello('Smith');
+    console.log(helloSmith);
+
+    const finalScore = getFinalScore(85);
+  </script>
+</body>
+
+</html>

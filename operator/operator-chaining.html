@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Operator Chanining</title>
+</head>
+
+<body>
+  <script>
+    const person = {
+      name: "John",
+      age: 30,
+      city: "New York"
+    };
+
+    // Operator Chaining
+    // Operator yang digunakan untuk mengecek apakah sebuah properti ada di dalam sebuah objek
+
+    // Contoh 1
+    let checkName = person.name?.length;
+    console.info(`Apakah properti name ada di dalam objek person? ${checkName}`);
+  </script>
+</body>
+
+</html>

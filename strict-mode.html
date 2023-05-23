@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Strict Mode</title>
+</head>
+
+<body>
+  <script>
+    // Strict Mode adalah sebuah mode khusus yang dapat diaktifkan di JavaScript untuk menampilkan error untuk kode yang seharusnya gagal (strict mode tidak mengubah cara kerja JavaScript, tetapi mengubah cara JavaScript bekerja dan memunculkan error untuk kode yang seharusnya gagal).
+    // Strict Mode diaktifkan dengan menambahkan 'use strict'; di awal kode JavaScript.
+
+    // Contoh 1
+    function useStrictMode() {
+      'use strict'; // strict mode diaktifkan
+
+      const person = {
+        name: 'Zacky',
+        age: 20,
+        address: 'Jakarta'
+      };
+
+      // error
+      with (person) {
+        console.log(`Nama saya ${name}. Umur saya ${age} tahun. Saya tinggal di ${address}.`);
+      }
+    }
+
+    useStrictMode();
+  </script>
+</body>
+
+</html>

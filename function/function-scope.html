@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Scope</title>
+</head>
+
+<body>
+  <script>
+    // Function Scope is a variable that can only be accessed inside the function
+    // Terdapat 2 jenis Function Scope: Global Scope dan Local Scope
+    // Global Scope adalah variabel yang dapat diakses dari mana saja
+    // Local Scope adalah variabel yang hanya dapat diakses dari dalam function
+
+    // Global Scope
+    let message = 'Hello World';
+
+    function sayHello(firstName, middleName, lastName) {
+      // Local Scope (firstName, middleName, lastName, message)
+      // Local Scope dapat mengakses Global Scope
+      // Global Scope tidak dapat mengakses Local Scope
+      let message = `Hello ${firstName} ${middleName} ${lastName}`;
+      console.log(message);
+    }
+
+    sayHello('John', 'F', 'Kennedy');
+  </script>
+</body>
+
+</html>

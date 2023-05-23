@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Recursive</title>
+</head>
+
+<body>
+  <script>
+    // Function Recursive is a function that calls itself until it reaches the base case
+    // Base case is a condition that stops the recursive function
+    // Recursive function is useful for solving problems that can be broken down into smaller sub-problems of the same type
+
+    // Example 1
+    function oldFactorial(n) {
+      let result = 1;
+
+      for (let i = 1; i <= n; i++) {
+        result *= i;
+      }
+
+      return result;
+    }
+
+    // Example 2
+    function factorial(n) {
+      if (n == 1) {
+        return 1;
+      } else {
+        return n * factorial(n - 1);
+      }
+    }
+
+    console.log(oldFactorial(5));
+    console.log(factorial(5));
+  </script>
+</body>
+
+</html>

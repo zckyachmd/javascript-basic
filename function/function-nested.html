@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Nested</title>
+</head>
+
+<body>
+  <script>
+    // Function Nested is a function inside another function
+    // Function Nested can access variable from parent function
+
+    function sayHello(firstName, middleName, lastName) {
+      let message = `Hello ${firstName} ${middleName} ${lastName}`;
+
+      function say() {
+        console.log(message);
+      }
+
+      say();
+    }
+
+    sayHello('John', 'F', 'Kennedy');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Undifined</title>
+</head>
+
+<body>
+  <script>
+    let name;
+
+    if (name === undefined) {
+      console.info(`Name is undefined`);
+    } else {
+      console.info(`Name is defined`);
+    }
+
+    let names = ['John', 'Jane', 'Mark'];
+    if (names[0] === undefined) {
+      console.info(`Array index 3 is undefined`);
+    } else {
+      console.info(`Array index 3 is defined`);
+    }
+
+    let person = {
+      name: 'John'
+    };
+    if (person.name === undefined) {
+      console.info(`Person name is undefined`);
+    } else {
+      console.info(`Person name is defined`);
+    }
+  </script>
+</body>
+
+</html>

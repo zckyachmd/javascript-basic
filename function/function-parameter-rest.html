@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Parameter Rest</title>
+</head>
+
+<body>
+  <script>
+    // Rest parameter is used to pass an indefinite number of arguments to a function
+    // Rest parameter is indicated by three dots (...)
+    // Rest parameter must be the last parameter
+    // Rest parameter is an array of arguments
+    function sum(name, ...data) {
+      let total = 0;
+
+      for (let i of data) {
+        total += i;
+      }
+
+      console.log(`Total ${name} is ${total}`);
+    }
+
+    sum('John', 1, 2, 3, 4, 5);
+    sum('Zack', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+    // Spread operator is used to pass an array to a function
+    // Spread operator is indicated by three dots (...)
+    // Spread operator must be the last parameter
+    // Spread operator is an array of arguments
+    sum('Ace', ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+    // Arguments object is an array-like object that stores all arguments passed to a function
+    // Arguments object is not an array
+    // Arguments object is not available in arrow function
+    function oldSum() {
+      let total = 0;
+
+      for (let i of arguments) {
+        total += i;
+      }
+
+      console.log(`Total is ${total}`);
+    }
+
+    oldSum(1, 2, 3, 4, 5);
+  </script>
+</body>
+
+</html>

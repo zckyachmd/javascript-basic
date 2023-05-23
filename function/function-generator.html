@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Generator</title>
+</head>
+
+<body>
+  <script>
+    // Function Generator is a function that returns a function as its result
+    // Generator function is marked with an asterisk (*) after the function keyword
+    // Generator is lazy, it will not execute the function until it is called
+    function* buatGanjil(value) {
+      for (let i = 0; i < value; i++) {
+        if (i % 2 == 1) {
+          yield i;
+        }
+      }
+    }
+
+    const genGanjil = buatGanjil(10);
+    for (const ganjil of genGanjil) {
+      console.log(ganjil);
+    }
+
+  </script>
+</body>
+
+</html>

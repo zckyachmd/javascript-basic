@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>If Expression</title>
+</head>
+
+<body>
+  <script>
+    const examValue = 75;
+
+    // If expression with else if and else
+    // Kondisi akan dievaluasi dari atas ke bawah
+    // Jika kondisi pertama terpenuhi, maka kondisi dibawahnya tidak akan dievaluasi
+    // Jika tidak ada kondisi yang terpenuhi, maka blok else akan dieksekusi
+    if (examValue >= 80) {
+      document.write('<p>You passed the exam</p>');
+    } else if (examValue >= 60) {
+      document.write('<p>You passed the exam with a C</p>');
+    } else if (examValue >= 40) {
+      document.write('<p>You passed the exam with a D</p>');
+    } else {
+      document.write('<p>You failed the exam</p>');
+    }
+  </script>
+</body>
+
+</html>

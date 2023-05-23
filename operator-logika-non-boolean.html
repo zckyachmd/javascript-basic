@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Operator Logika Non Boolean</title>
+</head>
+
+<body>
+  <script>
+    // Operator logika non boolean adalah operator yang mengembalikan nilai bukan boolean (true atau false)
+    // Dengan simbol && (AND), || (OR), dan ! (NOT)
+
+    // Falsy dengan operator OR (||) mengambil nilai pertama yang true (atau terakhir jika menggunakan operator NOT)
+    console.info("Hello" || "") // Hello
+    console.info("" || "Hello") // Hello
+    console.info("0" || "Nol") // 0
+    console.info(0 || "Nol") // Nol
+    console.info(NULL || "NULL") // NULL (string)
+    console.info(undefined || "Undefined") // Undefined (string)
+
+    const person = {
+      name: "John",
+      age: 20,
+    };
+
+    const name = person.name || "Anonymous";
+    console.info(name); // John
+
+    // Truthy dengan operator AND (&&) mengambil nilai pertama yang false (atau terakhir jika menggunakan operator NOT)
+    console.info("" && "Hello") // ""
+    console.info([] && "") // []
+  </script>
+</body>
+
+</html>

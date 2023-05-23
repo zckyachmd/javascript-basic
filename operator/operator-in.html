@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Operator In</title>
+</head>
+
+<body>
+  <script>
+    let person = {
+      name: "John",
+      age: 30,
+      city: "New York"
+    };
+
+    // Operator In
+    // Operator yang digunakan untuk mengecek apakah sebuah properti ada di dalam sebuah objek
+    // Hasil yang didapatkan adalah boolean
+    // Hanya melakuan pengecekan pada properti yang ada di dalam objek, bukan pada nilai properti
+
+    // Contoh 1
+    let checkName = "name" in person;
+    console.info(`Apakah properti name ada di dalam objek person? ${checkName}`);
+  </script>
+</body>
+
+</html>

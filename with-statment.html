@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>With Statment</title>
+</head>
+
+<body>
+  <script>
+    // With Statement adalah sebuah statement yang digunakan untuk membuat scope baru dengan menggunakan object sebagai scope-nya. Dengan menggunakan with statement, kita dapat mengakses properti dari object tersebut tanpa harus menuliskan nama object-nya terlebih dahulu. Dengan begitu, kita dapat mengakses properti dari object tersebut secara langsung.
+    // With Statement tidak disarankan untuk digunakan karena dapat mengakibatkan performa yang buruk. Selain itu, with statement juga tidak dapat digunakan pada strict mode.
+
+    // Contoh penggunaan with statement
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      age: 33,
+    };
+
+    // Menggunakan with statement
+    with (person) {
+      console.info(`Nama saya ${firstName} ${lastName} dan umur saya ${age} tahun`);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Closure</title>
+</head>
+
+<body>
+  <script>
+    function createAdder(value) {
+      const owner = 'Zacky';
+
+      function add(params) {
+        console.info(owner);
+        return value + params;
+      }
+
+      return add;
+    }
+
+    const addFive = createAdder(5);
+    console.log(addFive(5));
+    console.log(addFive(10));
+
+    const addTen = createAdder(10);
+    console.log(addTen(5));
+    console.log(addTen(10));
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Tipe Data Array</title>
+</head>
+
+<body>
+  <script>
+    let names = [];
+
+    // Add element to array (.push)
+    names.push("Zacky");
+    names.push("Achmad", "Fauzi");
+    names.push("Rahman");
+
+    //
+    console.table(names);
+
+    // Count array length (.length)
+    console.info("Array length: " + names.length);
+
+    // Access array element by index
+    console.info("First element: " + names[0]);
+
+    // Change array element by index
+    names[0] = "Farizka";
+    console.info("First element change: " + names[0]);
+
+    // Delete array element by index
+    delete names[0];
+    console.info("First element delete: " + names[0]);
+
+  </script>
+</body>
+
+</html>

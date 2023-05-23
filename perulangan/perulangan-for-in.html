@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>For In</title>
+</head>
+
+<body>
+  <script>
+    // For In Loop adalah perulangan yang digunakan untuk mengulang properti dari sebuah object atau index dari array secara berurutan.
+    // For In Loop hanya dapat digunakan untuk object dan array. Meski bisa digunakan untuk array, namun tidak disarankan karena akan mengakibatkan performa yang buruk.
+
+    // Contoh penggunaan for in untuk object
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      age: 33,
+    };
+
+    // Mengambil semua properti dari object person
+    for (let properti in person) {
+      console.info(`Properti ${properti} memiliki nilai ${person[properti]}`);
+    }
+
+    // Contoh penggunaan for in untuk array
+    const colors = ["red", "green", "blue"];
+
+    // Mengambil semua index dari array colors
+    for (let index in colors) {
+      console.info(`Index ke-${index} memiliki nilai ${colors[index]}`);
+    }
+  </script>
+</body>
+
+</html>

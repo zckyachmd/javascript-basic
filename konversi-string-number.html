@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Konversi String dan Number</title>
+</head>
+
+<body>
+  <script>
+    const nilaiUjian = 70;
+    const nilaiAbsen = parseInt("70"); // String to Number
+    const sum = nilaiUjian + nilaiAbsen; // String + Number = String (Concatenation)
+
+    // String to Number
+    document.write("Nilai Ujian: " + nilaiUjian + "<br>");
+    document.write(`Nilai Absen (Bulat): ${parseInt(`70.1`)}<br>`); // (Bulat)
+    document.write(`Nilai Absen (Decimal): ${parseFloat(`70.1`)}<br>`); // (Decimal)
+    document.write(`Nilai Absen (Auto): ${Number(`70.1`)}<br>`); // (Decimal / Bulat)
+
+    // Number to String
+    document.write(`Sum: ${sum}<br>`);
+    document.write(`Sum (String): ${String(sum)}<br>`);
+    document.write(`Sum (Auto): ${sum.toString()}<br>`);
+
+    // NaN (Not a Number)
+    document.write(`NaN: ${Number(`Hello`)}<br>`);
+    document.write(`NaN: ${parseInt(`100a`)}<br>`);
+    document.write(`NaN: ${parseFloat(`100.1a`)}<br>`);
+
+    // If NaN then operation will be NaN
+    document.write(`NaN: ${Number(`Hello`) + 1}<br>`);
+    document.write(`NaN: ${parseInt(`100a`) + 1}<br>`);
+
+    // Check NaN (isNaN)
+    document.write(`NaN: ${isNaN(Number(`Hello`))}<br>`);
+  </script>
+</body>
+
+</html>

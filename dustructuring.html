@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Dustructuring</title>
+</head>
+
+<body>
+  <script>
+    // Destructuring adalah sintaks ES6 yang dapat mengeluarkan nilai dari array atau properties dari sebuah object ke dalam satuan yang lebih kecil.
+
+    // Destructuring Array
+    const colors = ['merah', 'kuning', 'hijau', 'biru', 'ungu'];
+    const [satu, dua, tiga, ...others] = colors; // satu = merah, dua = kuning, tiga = hijau (sisa = others)
+
+    console.log(satu); // merah
+    console.log(dua); // kuning
+    console.log(tiga); // hijau
+    console.table(others); // ['biru', 'ungu']
+
+    // Destructuring Object
+    const person = {
+      firstName: 'Zacky',
+      lastName: 'Burhani',
+      age: 20,
+      address: {
+        street: 'Jl. ABC',
+        city: 'Jakarta',
+        province: 'DKI Jakarta',
+        postCode: '12345'
+      },
+      hobbies: ['Coding', 'Gaming', 'Reading']
+    };
+    const {
+      firstName,
+      lastName,
+      address: {
+        street,
+        city
+      },
+      ...other
+    } = person;
+
+    console.log(firstName); // Zacky
+    console.log(lastName); // Burhani
+    console.log(street); // Jl. ABC
+    console.log(city); // Jakarta
+    console.log(other); // other object (age, hobbies)
+
+    // Destructuring Function Arguments (Parameter) - Object
+    function displayPerson({ firstName, lastName, age }) {
+      console.log(`Nama saya ${firstName} ${lastName}. Umur saya ${age} tahun.`);
+    }
+
+    const displayPerson = {
+      firstName: 'Zacky',
+      lastName: 'Burhani',
+      age: 20
+    };
+
+    displayPerson(person);
+
+    // Destructuring Default Value
+    const names = ['Zacky', 'Burhani', 'Achmad'];
+    const [first, second, third, nickName = 'Zack'] = names; // nickName = Zack (default value)
+    console.log(nickName); // Zack (default value)
+
+    // Destructuring Object Change Variable Name
+    const home = {
+      name: 'Rumah',
+      width: 200,
+      length: 400
+    };
+    const { name: homeName, width: homeWidth, length: homeLength } = home; // homeName = Rumah (change variable name)
+    console.log(homeName); // Rumah (name) (change variable name)
+  </script>
+</body>
+
+</html>

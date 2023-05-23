@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Function Arrow Object</title>
+</head>
+
+<body>
+  <script>
+    // Function Arrow digunakan untuk menghindari perubahan konteks this yang tidak diinginkan
+    // Function Arrow tidak memiliki konsep this
+    // Function Arrow tidak memiliki konsep arguments
+    // Function Arrow tidak memiliki konsep new.target
+    // Function Arrow tidak memiliki konsep prototype
+    // Function Arrow tidak memiliki konsep super
+
+    // arrow function in object
+    const person = {
+      name: 'Zacky', // property in object cant be arrow function because arrow function dont have this concept
+      sayHello: (name) => {
+        console.info(`Hello ${name}`); // Hello Jane
+      },
+    }
+
+    person.sayHello('Jane');
+  </script>
+</body>
+
+</html>
