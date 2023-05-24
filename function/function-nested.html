@@ -13,9 +13,11 @@
     // Function Nested is a function inside another function
     // Function Nested can access variable from parent function
 
+    // Function (sayHello)
     function sayHello(firstName, middleName, lastName) {
       let message = `Hello ${firstName} ${middleName} ${lastName}`;
 
+      // Function Nested (say)
       function say() {
         console.log(message);
       }

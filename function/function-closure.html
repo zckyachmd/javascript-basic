@@ -10,9 +10,12 @@
 
 <body>
   <script>
+    // Function Closure
+    // Closure adalah sebuah function ketika memiliki akses ke parent scope-nya, meskipun parent scopenya sudah selesai dieksekusi
     function createAdder(value) {
       const owner = 'Zacky';
 
+      // Closure function (add)
       function add(params) {
         console.info(owner);
         return value + params;
@@ -21,6 +24,7 @@
       return add;
     }
 
+    // Closure function (addFive)
     const addFive = createAdder(5);
     console.log(addFive(5));
     console.log(addFive(10));
